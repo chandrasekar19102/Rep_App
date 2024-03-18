@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-bkgt0t4p5$a*ayw$mgy)u*x-(yg@*bo4$jh71a*l*()+j4&y7c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.xhkovcaijphrdrokbpzr',
+        'PASSWORD': 'Safenet3300!',
+        'HOST':'aws-0-ap-south-1.pooler.supabase.com',
+        'PORT': '5432',
     }
 }
 
